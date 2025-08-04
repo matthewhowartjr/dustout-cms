@@ -7,3 +7,7 @@ type isAuthenticated = (args: AccessArgs<User>) => boolean
 export const authenticated: isAuthenticated = ({ req: { user } }) => {
   return Boolean(user)
 }
+
+export const ignoreAuthenticated: isAuthenticated = ({ req: { user } }) => {
+  return Boolean(false)
+}
