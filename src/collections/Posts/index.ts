@@ -9,6 +9,8 @@ import {
   lexicalEditor,
 } from '@payloadcms/richtext-lexical'
 
+import { TextColorFeature } from 'payload-lexical-typography'
+
 import { authenticated } from '../../access/authenticated'
 import { authenticatedOrPublished } from '../../access/authenticatedOrPublished'
 import { Banner } from '../../blocks/Banner/config'
@@ -96,6 +98,7 @@ export const Posts: CollectionConfig<'posts'> = {
                     FixedToolbarFeature(),
                     InlineToolbarFeature(),
                     HorizontalRuleFeature(),
+                    TextColorFeature({ colors: ['#005BAB', '#FF9000', '#000000'] }),
                   ]
                 },
               }),
